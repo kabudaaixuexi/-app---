@@ -1,5 +1,6 @@
 import { render } from "./packages/xseditor-dummy/render"
 import { createElement } from "./packages/xseditor-dummy/create"
+import './style'
 
 export default (
     Element: Element | null,
@@ -8,6 +9,7 @@ export default (
         useDecorator: false
     }
 ) => {
+    if (!Element) return new Error('渲染节点不能为空')
     const ini = createElement("article",{id:"test", contenteditable: true, allowDrop: true, },[
         createElement("p",{key:"a",style:{color:"red",background:"green"}},"节点1"),
         // createElement("p",{key:"b",class:"item"},"节点2"),

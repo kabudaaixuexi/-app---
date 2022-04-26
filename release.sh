@@ -11,17 +11,17 @@ VV=${VERSION#*.}
 V2=${VV%%.*}
 V3=${VERSION##*.}
 
-# 新版本号 
+# 新版本号
 if [ `expr ${V3} + 1` -gt 9 ]; then
     if [ `expr ${V2} + 1` -gt 9 ]; then
         V1=`expr ${V1} + 1`
         V2=0
         V3=0
-    else 
+    else
         V2=`expr ${V2} + 1`
         V3=0
     fi
-else 
+else
     V3=`expr ${V3} + 1`
 fi
 # patch | major
@@ -30,7 +30,7 @@ fi
 #     NEWVERSION="$V1.$V2.$V3"
 # else
 #     echo 'patch---小版本变动'
-#     NEWVERSION="$V1.$V2.$V3"
+    NEWVERSION="$V1.$V2.$V3"
 # fi
 
 read -p "发布新版本 $NEWVERSION (原版本$VERSION) - 确定? (y/n) " -n 1 -r
@@ -58,7 +58,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 #   echo $NEWVERSION
   # update packages
   # using subshells to avoid having to cd back
-# ( 
+# (
     # ( cd packages/vue-template-compiler
     #     npm version "$VERSION"
     #     if [[ -z $RELEASE_TAG ]]; then
@@ -80,31 +80,18 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # commit
   echo "开始提交代码"
   git add .
-#   git add -f \
-#     dist/*.js \
-#     packages/vue-server-renderer/basic.js \
-#     packages/vue-server-renderer/build.dev.js \
-#     packages/vue-server-renderer/build.prod.js \
-#     packages/vue-server-renderer/server-plugin.js \
-#     packages/vue-server-renderer/client-plugin.js \
-#     packages/vue-template-compiler/build.js \
-#     packages/vue-template-compiler/browser.js
   git commit -m "build: build $NEWVERSION"
-  # generate release note
-#   npm run release:note
-  # tag version
   npm version "$NEWVERSION" --message "build: release $NEWVERSION"
-
   # publish
   echo "开始上传代码到远程库"
   git push
-  
-  echo "开始上传npm包"
-  if [[ -z $RELEASE_TAG ]]; then
-    echo "提交新的npm包版本"
-    sudo npm publish
-  else
-    echo "提交新的npm包版本"
-    sudo npm publish --tag "$RELEASE_TAG"
-  fi
+
+#   echo "开始上传npm包"
+#   if [[ -z $RELEASE_TAG ]]; then
+#     echo "提交新的npm包版本"
+#     sudo npm publish
+#   else
+#     echo "提交新的npm包版本"
+#     sudo npm publish --tag "$RELEASE_TAG"
+#   fi
 echo "Release Success!"

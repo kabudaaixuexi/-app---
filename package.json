@@ -1,7 +1,7 @@
 {
   "name": "xs-editor",
   "version": "0.0.1",
-  "description": "更轻的管理状态插件",
+  "description": "一个还挺个性的富文本",
   "author": "ningrui",
   "devDependencies": {
     "@types/jest": "^27.4.1",
