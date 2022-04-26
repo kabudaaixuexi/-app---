@@ -1,6 +1,5 @@
 import { render } from "./packages/xseditor-dummy/render"
 import { createElement } from "./packages/xseditor-dummy/create"
-import './style'
 
 export default (
     Element: Element | null,
