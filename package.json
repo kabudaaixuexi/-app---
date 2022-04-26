@@ -1,0 +1,33 @@
+{
+  "name": "xs-editor",
+  "version": "0.0.1",
+  "description": "更轻的管理状态插件",
+  "author": "ningrui",
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "eslint": "^8.13.0",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "pub": "sh release.sh"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kabudaaixuexi/sw-decorator-property.git"
+  }
+}
