@@ -25,6 +25,7 @@
     "lib"
   ],
   "dependencies": {
+    "axios": "^0.27.1",
     "copyfiles": "^2.4.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2"

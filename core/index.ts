@@ -1,10 +1,12 @@
 import { render } from "./packages/xseditor-dummy/render"
 import { createElement } from "./packages/xseditor-dummy/create"
+import handleChange from './packages/xseditor-listener/change'
 
 export default (
     Element: Element | null,
     Config:Configure = {
-        'xs-class': ''
+        'xs-class': '',
+        onChange: () => {}
     }
 ) => {
     if (!Element) return new Error('渲染节点不能为空')
@@ -15,5 +17,8 @@ export default (
         createElement("p",{key:"d"},"节点4"),
         createElement("p",{key:"b",class:"item"},"节点2"),
     ]);
-    return render(ini, Element)
+    {
+        render(ini, Element)
+        handleChange(Element, Config.onChange)
+    }
 }
