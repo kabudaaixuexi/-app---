@@ -29,7 +29,7 @@ export function mount(vNode: Target, container: Target, flagNode?: Target) {
 //挂载元素
 function mountElement(vNode: Target, container: Target, flagNode?: Target) {
     let dom = document.createElement(vNode.tag);
-    // vNode.el = dom;
+    vNode.el = dom;
     let {
         data,
         children,
@@ -63,6 +63,6 @@ function mountElement(vNode: Target, container: Target, flagNode?: Target) {
 // 挂载文本
 function mountText(vNode: Target, container: Target) {
     let dom = document.createTextNode(vNode.children);
-    // vNode.el = dom;
+    vNode.el = dom;
     container.appendChild(dom);
 }
