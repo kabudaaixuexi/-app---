@@ -13,9 +13,9 @@ export default (
     if (!Element) return new Error('渲染节点不能为空')
     {
         // 渲染选项区
-        render(OptionArea(), Element, Config)
+        render(OptionArea(Config), Element, Config)
         // 渲染编辑区
-        render(EditArea(), Element, Config)
+        render(EditArea(Config), Element, Config)
         // 配置监听项
         handleChange(Element, Config.onChange)
     }
