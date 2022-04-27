@@ -1,10 +1,10 @@
-export default (Config?: Target) => {
+export const creatEmptyVd = () => {
     return {
         children: [],
         _data: {
             contenteditable: "true",
             allowdrop: "true",
-            class: `xs-editor-container`
+            class: `notepad_sidebar_cont`
         },
         _tag: "article",
         _type: 1,

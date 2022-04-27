@@ -63,3 +63,13 @@
     overflow-y: auto;
     font-family:'Courier New', Courier, monospace;
 }
+
+.xs-editor-decorate {
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    color: var(--xs-text-color-primary);
+    border: 1px solid darkgray;
+    overflow-x: auto;
+    font-size: 12px;
+}
