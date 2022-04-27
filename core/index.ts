@@ -1,5 +1,6 @@
 import { render } from "./packages/xseditor-dummy/render"
-import { createElement } from "./packages/xseditor-dummy/create"
+import OptionArea from './packages/xseditor-decorate'
+import EditArea from './packages/xseditor-kernel'
 import handleChange from './packages/xseditor-listener/change'
 
 export default (
@@ -10,15 +11,12 @@ export default (
     }
 ) => {
     if (!Element) return new Error('渲染节点不能为空')
-    const ini = createElement("article",{id:"test", class: `xs-editor-container ${Config['xs-class']}`, contenteditable: true, allowDrop: true, },[
-        createElement("p",{key:"a",style:{color:"red",background:"green"}},"节点1"),
-        // createElement("p",{key:"b",class:"item"},"节点2"),
-        // createElement("p",{key:"c","@click":() => {alert(111)}},"节点3"),
-        createElement("p",{key:"d"},"节点4"),
-        createElement("p",{key:"b",class:"item"},"节点2"),
-    ]);
     {
-        render(ini, Element)
+        // 渲染选项区
+        render(OptionArea(), Element, Config)
+        // 渲染编辑区
+        render(EditArea(), Element, Config)
+        // 配置监听项
         handleChange(Element, Config.onChange)
     }
 }

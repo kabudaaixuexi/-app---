@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "plugins": [{ "name": "typescript-plugin-css-modules" }],
+      "removeComments": true,
+      "target": "es2016",                                  
+      "lib": ["es5","es6","es7","dom"],                    
+      "experimentalDecorators": true,                   
+      "module": "commonjs",                             
+      "declaration": true,                             
+      "outDir": "../lib",                               
+      "esModuleInterop": true,                        
+      "forceConsistentCasingInFileNames": true,       
+      "strict": true,                                
+      "skipLibCheck": true 
+    }
+}
+  

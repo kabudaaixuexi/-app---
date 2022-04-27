@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "plugins": [{ "name": "typescript-plugin-css-modules" }],
+      "removecommmens": true,
+      "target": "es2016",                                  
+      "lib": ["es5","es6","es7","dom"],                    
+      "experimentalDecorators": true,                   
+      "module": "amd",                             
+      "declaration": true,                             
+      "outDir": "../lib",   
+      "outFile": "../lib/app.js",                   
+      "esModuleInterop": true,                        
+      "forceConsistentCasingInFileNames": true,       
+      "strict": true,                                
+      "skipLibCheck": true 
+    }
+  }
+  

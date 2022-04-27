@@ -13,7 +13,7 @@ const childrenType = {
 
 
 // 标签名，属性，子元素
-export function createElement(tag: Target, data: Target, children: null | Target = null) {
+export function createElement(tag: Target, data: Target, children: null | Target = []) {
     let flag; // 用于标记元素的类型
     if (typeof tag === "string") {
         //元素是一个普通的html标签
