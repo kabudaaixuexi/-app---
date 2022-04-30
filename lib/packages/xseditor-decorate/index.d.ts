@@ -30,32 +30,6 @@ declare const _default: (Config?: Target) => {
             class: string;
             onClick: (e: any) => void;
         };
-        children: ({
-            xs_type: number;
-            xs_value: string;
-            xs_tag?: undefined;
-            xs_data?: undefined;
-            children?: undefined;
-        } | {
-            xs_tag: string;
-            xs_type: number;
-            xs_data: {
-                class: string;
-                id: string;
-            };
-            children: {
-                xs_type: number;
-                xs_value: any;
-            }[];
-            xs_value?: undefined;
-        })[];
-    } | {
-        xs_tag: string;
-        xs_type: number;
-        xs_data: {
-            class: string;
-            onClick: (e: any) => void;
-        };
         children: {
             xs_type: number;
             xs_value: string;
@@ -84,10 +58,12 @@ declare const _default: (Config?: Target) => {
                 xs_type: number;
                 xs_tag: string;
                 xs_data: {
-                    style: string;
                     onClick: () => void;
                 };
-                children: never[];
+                children: {
+                    xs_type: number;
+                    xs_value: string;
+                }[];
             }[];
             xs_value?: undefined;
         })[];

@@ -17,6 +17,7 @@
     }
 }
 .xs-hiliteColor-show {
+    z-index: 9;
     animation: hiliteColorShow .28s 1 forwards;
 }
 .xs-hiliteColor-hide {
@@ -32,6 +33,7 @@
     overflow-y: auto;
     background: var(--xs-nav-bg);
     border-radius: 20px;
+    box-sizing: border-box;
     border: calc(1px / 2) solid var(--xs-nav-bg-hover);
 }
 #xs-hiliteColor-box::-webkit-scrollbar {

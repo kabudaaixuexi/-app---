@@ -1,4 +1,5 @@
 import insertAtCursor from "../../xseditor-utils/insertAtCursor";
+// import changeStyle from "../../xseditor-utils/changeStyle";
 import request from '../../xseditor-utils/request'
 import message from "../_message";
 
@@ -38,9 +39,12 @@ export default function (Config: Target) {
                 data: form,
                 form: true
             }).then((res: Target) => {
-                insertAtCursor(`
-                    <div class="xs-inset"><img onclick="window.open('${res.data[0]}')" style="max-width:100px;height:auto;" src="${res.data[0]}" /></div>
-                `);
+              // changeStyle({command:'insertHTML', value: `
+              //     <div class="xs-inset"><img onclick="window.open('${res.data[0]}')" style="max-width:100px;height:auto;" src="${res.data[0]}" /></div>
+              // `})
+              insertAtCursor(`
+                  <div class="xs-inset"><img onclick="window.open('${res.data[0]}')" style="max-width:100px;height:auto;" src="${res.data[0]}" /></div>
+              `)
             })
           },
         },

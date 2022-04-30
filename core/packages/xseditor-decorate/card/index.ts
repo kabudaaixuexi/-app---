@@ -1,6 +1,6 @@
-import changeStyle from '../../xseditor-utils/changeStyle'
+import changeStyle from "../../xseditor-utils/changeStyle";
+// import insertAtCursor from "../../xseditor-utils/insertAtCursor";
 import { cards } from  '../config'
-console.log(cards);
 
 const hasClass = (el: Element, className: String) => {
     var reg = new RegExp('(^|\\s)' + className + '(\\s|$)');
@@ -42,9 +42,21 @@ export default {
                 class: 'xs-card-hide',
                 id: 'xs-card-box'
             },
-            children: cards.map((ce: Target) => ({
-                xs_type: 2,
-                xs_value: ce
+            children: cards.map((ce: Target, index: number) => ({
+                xs_type: 1,
+                xs_tag: 'div',
+                xs_data: {
+                    class: `xs-card${index + 1}`,
+                    onClick: () => {
+                        changeStyle({command:'insertHTML', value: ce})
+                    }
+                },
+                children: [
+                    {
+                        xs_type: 3,
+                        xs_value: `卡片${index + 1}`
+                    }
+                ]
             }))
         }
     ],

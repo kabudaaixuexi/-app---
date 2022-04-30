@@ -2,9 +2,14 @@
 @import url(./card.css);
 @import url(./hiliteColor.css);
 @import url(./foreColor.css);
+@import url(./insertHTML.css);
+* {
+    margin: 0;
+    padding: 0;
+}
 :root {
     /* 动态 */
-    --xs-nav-bg: #e5e6e7;
+    --xs-nav-bg: #eaedf0;
     --xs-nav-bg-hover: #d5dfe9;
     --xs-nav-padding: 6px;
     --xs-nav-margin: 2px 4px;
@@ -62,9 +67,12 @@
     box-sizing: border-box;
     border: 1px solid #337ecc;
     overflow-y: auto;
+    font-size: 14px;
     font-family:'Courier New', Courier, monospace;
 }
-.xs-editor-container > .xs-inset > img {
+.xs-editor-container img {
+    max-width: 100px;
+    height: auto;
     cursor: pointer;
 }
 
@@ -86,6 +94,8 @@ xs-nav {
     padding: var( --xs-nav-padding);
     margin: var( --xs-nav-margin);
     display: grid;
+    box-sizing: border-box;
+    min-height: 28px;
     place-content: center;
     transition: all .36s;
     cursor: pointer;

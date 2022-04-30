@@ -9,6 +9,17 @@ import StrikeThrough from './strikeThrough'
 import JustifyCenter from './justifyCenter'
 import JustifyRight from './justifyRight'
 import JustifyLeft from './justifyLeft'
+import FontSize01 from './_fontSize01'
+import FontSize02 from './_fontSize02'
+import FontSize03 from './_fontSize03'
+import FontSize04 from './_fontSize04'
+import FontSize05 from './_fontSize05'
+import FontSize06 from './_fontSize06'
+import FontName01 from './_fontName01'
+import FontName02 from './_fontName02'
+import FontName03 from './_fontName03'
+import FontName04 from './_fontName04'
+import InsertHTML from './insertHTML'
 import RemoveFormat from './removeFormat'
 export default (Config?: Target) => {
     return {
@@ -24,6 +35,21 @@ export default (Config?: Target) => {
             JustifyLeft,
             ForeColor,
             HiliteColor,
+
+            FontSize01,
+            FontSize02,
+            FontSize03,
+            FontSize04,
+            FontSize05,
+            FontSize06,
+
+            FontName01,
+            FontName02,
+            FontName03,
+            FontName04,
+
+            InsertHTML,
+
             RemoveFormat
         ],
         xs_data: {
