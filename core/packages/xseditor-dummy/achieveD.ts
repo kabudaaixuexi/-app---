@@ -1,22 +1,29 @@
 export const achieveD = (vd: Target, vm?: Element | Target) => {
-    let _node: any = null;
-    let type = vd._type;
+    let xs_node: any = null;
+    let type = vd.xs_type;
     if (type === 1) { // 元素节点
-        _node = document.createElement(vd._tag);
+        xs_node = document.createElement(vd.xs_tag);
         // 属性
-        let _data = vd._data;
-        Object.entries(_data).forEach(([attrName, attrValue]) => {
-            _node.setAttribute(attrName, attrValue);
+        let xs_data = vd.xs_data;
+        Object.entries(xs_data).forEach(([attrName, attrValue]) => {
+            if (attrName.substring(0, 2) === 'on') { // event
+                xs_node.addEventListener(attrName.substring(2).toLowerCase(), (attrValue as any).bind(xs_node));
+            } else {
+                xs_node.setAttribute(attrName, attrValue);
+            }
         })
         // 含有子节点
         let children = vd.children;
         children.forEach((ed: Target) => {
             let childNode = achieveD(ed);
-            _node.appendChild(childNode);
+            xs_node.appendChild(childNode);
         })
-
-    } else if (type === 3) { // 文本节点
-        return document.createTextNode(vd._value); // 创建一个文本节点
+    } 
+    else if (type === 2) {
+        return new DOMParser().parseFromString(vd.xs_value, "text/xml").documentElement
     }
-    return _node;
+    else if (type === 3) { // 文本节点
+        return document.createTextNode(vd.xs_value); // 创建一个文本节点
+    }
+    return xs_node;
 }

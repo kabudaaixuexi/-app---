@@ -1,13 +1,13 @@
 export default (Config?: Target) => {
     return {
         children: [],
-        _data: {
+        xs_data: {
             contenteditable: "true",
             allowdrop: "true",
             class: `xs-editor-container`
         },
-        _tag: "article",
-        _type: 1,
-        _value: undefined
+        xs_tag: "article",
+        xs_type: 1,
+        xs_value: undefined
     }
 }

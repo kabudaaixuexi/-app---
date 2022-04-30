@@ -1,7 +1,15 @@
+@import url(./message.css);
+@import url(./card.css);
+@import url(./hiliteColor.css);
+@import url(./foreColor.css);
 :root {
-    color-scheme: light;
-    --xs-color-white: #ffffff;
-    --xs-color-black: #000000;
+    /* 动态 */
+    --xs-nav-bg: #e5e6e7;
+    --xs-nav-bg-hover: #d5dfe9;
+    --xs-nav-padding: 6px;
+    --xs-nav-margin: 2px 4px;
+    --xs-nav-br: 4px;
+
     --xs-color-primary: #409eff;
     --xs-color-primary-light-3: #79bbff;
     --xs-color-primary-light-5: #a0cfff;
@@ -9,6 +17,7 @@
     --xs-color-primary-light-8: #d9ecff;
     --xs-color-primary-light-9: #ecf5ff;
     --xs-color-primary-dark-2: #337ecc;
+
     --xs-color-success: #67c23a;
     --xs-color-success-light-3: #95d475;
     --xs-color-success-light-5: #b3e19d;
@@ -16,6 +25,7 @@
     --xs-color-success-light-8: #e1f3d8;
     --xs-color-success-light-9: #f0f9eb;
     --xs-color-success-dark-2: #529b2e;
+
     --xs-color-warning: #e6a23c;
     --xs-color-warning-light-3: #eebe77;
     --xs-color-warning-light-5: #f3d19e;
@@ -23,6 +33,7 @@
     --xs-color-warning-light-8: #faecd8;
     --xs-color-warning-light-9: #fdf6ec;
     --xs-color-warning-dark-2: #b88230;
+
     --xs-color-danger: #f56c6c;
     --xs-color-danger-light-3: #f89898;
     --xs-color-danger-light-5: #fab6b6;
@@ -30,13 +41,7 @@
     --xs-color-danger-light-8: #fde2e2;
     --xs-color-danger-light-9: #fef0f0;
     --xs-color-danger-dark-2: #c45656;
-    --xs-color-error: #f56c6c;
-    --xs-color-error-light-3: #f89898;
-    --xs-color-error-light-5: #fab6b6;
-    --xs-color-error-light-7: #fcd3d3;
-    --xs-color-error-light-8: #fde2e2;
-    --xs-color-error-light-9: #fef0f0;
-    --xs-color-error-dark-2: #c45656;
+
     --xs-color-info: #909399;
     --xs-color-info-light-3: #b1b3b8;
     --xs-color-info-light-5: #c8c9cc;
@@ -44,22 +49,63 @@
     --xs-color-info-light-8: #e9e9eb;
     --xs-color-info-light-9: #f4f4f5;
     --xs-color-info-dark-2: #73767a;
-    --xs-bg-color: #ffffff;
-    --xs-bg-color-page: #ffffff;
-    --xs-bg-color-overlay: #ffffff;
-    --xs-text-color-primary: #303133;
-    --xs-text-color-regular: #606266;
+
+    --xs-bg-color-default: transparent;
 }
 .xs-editor-container {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     z-index: 1;
     color: var(--xs-text-color-primary);
-    border: none;
     outline: none;
     padding: 16px 12px;
-    flex: 1;
-    margin-right: 2px;
+    box-sizing: border-box;
+    border: 1px solid #337ecc;
     overflow-y: auto;
     font-family:'Courier New', Courier, monospace;
+}
+.xs-editor-container > .xs-inset > img {
+    cursor: pointer;
+}
+
+.xs-editor-decorate {
+    width: 100%;
+    z-index: 1;
+    color: var(--xs-text-color-primary);
+    border: 1px solid darkgray;
+    font-size: 12px;
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+xs-nav {
+    display: inline-block;
+    padding: var( --xs-nav-padding);
+    margin: var( --xs-nav-margin);
+    display: grid;
+    place-content: center;
+    transition: all .36s;
+    cursor: pointer;
+    border-radius: var(--xs-nav-br);
+}
+xs-nav:hover {
+    background-color: var( --xs-nav-bg-hover);
+}
+.xs-blod {
+
+}
+
+.xs-img {
+    position: relative;
+}
+.xs-img > .xs-upload {
+    width: 26px;
+    height: 28px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
 }

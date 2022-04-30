@@ -1,13 +1,13 @@
 export const creatEmptyVd = () => {
     return {
         children: [],
-        _data: {
+        xs_data: {
             contenteditable: "true",
             allowdrop: "true",
             class: `notepad_sidebar_cont`
         },
-        _tag: "article",
-        _type: 1,
-        _value: undefined
+        xs_tag: "article",
+        xs_type: 1,
+        xs_value: undefined
     }
 }

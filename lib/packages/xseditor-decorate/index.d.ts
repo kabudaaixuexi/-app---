@@ -1,9 +1,102 @@
 declare const _default: (Config?: Target) => {
-    tag: any;
-    flag: string;
-    data: any;
-    children: any;
-    childrenFlag: string | undefined;
-    el: null;
+    children: ({
+        xs_tag: string;
+        xs_type: number;
+        xs_data: {
+            class: string;
+        };
+        children: ({
+            xs_tag: string;
+            xs_type: number;
+            xs_data: {
+                class: string;
+                type: string;
+                accept: string;
+                onChange: (e: any) => void;
+            };
+            children: never[];
+            xs_value?: undefined;
+        } | {
+            xs_type: number;
+            xs_value: string;
+            xs_tag?: undefined;
+            xs_data?: undefined;
+            children?: undefined;
+        })[];
+    } | {
+        xs_tag: string;
+        xs_type: number;
+        xs_data: {
+            class: string;
+            onClick: (e: any) => void;
+        };
+        children: ({
+            xs_type: number;
+            xs_value: string;
+            xs_tag?: undefined;
+            xs_data?: undefined;
+            children?: undefined;
+        } | {
+            xs_tag: string;
+            xs_type: number;
+            xs_data: {
+                class: string;
+                id: string;
+            };
+            children: {
+                xs_type: number;
+                xs_value: any;
+            }[];
+            xs_value?: undefined;
+        })[];
+    } | {
+        xs_tag: string;
+        xs_type: number;
+        xs_data: {
+            class: string;
+            onClick: (e: any) => void;
+        };
+        children: {
+            xs_type: number;
+            xs_value: string;
+        }[];
+    } | {
+        xs_tag: string;
+        xs_type: number;
+        xs_data: {
+            class: string;
+            onClick: (e: any) => void;
+        };
+        children: ({
+            xs_type: number;
+            xs_value: string;
+            xs_tag?: undefined;
+            xs_data?: undefined;
+            children?: undefined;
+        } | {
+            xs_tag: string;
+            xs_type: number;
+            xs_data: {
+                class: string;
+                id: string;
+            };
+            children: {
+                xs_type: number;
+                xs_tag: string;
+                xs_data: {
+                    style: string;
+                    onClick: () => void;
+                };
+                children: never[];
+            }[];
+            xs_value?: undefined;
+        })[];
+    })[];
+    xs_data: {
+        class: string;
+    };
+    xs_tag: string;
+    xs_type: number;
+    xs_value: undefined;
 };
 export default _default;

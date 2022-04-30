@@ -4,10 +4,10 @@
 export default class virtualNode {
     constructor(tag: Target, data: Target, value: Target, type: Number) {
         let vm = (this as Target)
-        vm._tag = tag && tag.toLowerCase();
-        vm._data = data;
-        vm._value = value;
-        vm._type = type;
+        vm.xs_tag = tag && tag.toLowerCase();
+        vm.xs_data = data;
+        vm.xs_value = value;
+        vm.xs_type = type;
         vm.children = [];
     }
     appendChild(vd: Target) {

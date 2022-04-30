@@ -10,6 +10,6 @@ export default (Vm: Element | Target, Config: Target) => {
         const xsEditor = achieveD(EditArea(Config))
         Vm.appendChild(xsEditor)
         // 配置监听项
-        handleChange(xsEditor, Config.onChange)
+        handleChange(xsEditor, Config)
     }
 }

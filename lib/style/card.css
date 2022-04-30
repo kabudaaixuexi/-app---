@@ -1,0 +1,98 @@
+.xs-card {
+    position: relative;
+}
+@keyframes cardShow {
+    0% {
+        display: block;
+        opacity: 0;
+        transform: translate(-40%, 50%);
+    }
+    20%{
+        opacity: 0;
+        transform: translate(-40%, 10%) scale(.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-40%, 0) scale(1);
+    }
+}
+.xs-card-show {
+    animation: cardShow .28s 1 forwards;
+}
+.xs-card-hide {
+    transform: scale(0);
+}
+#xs-card-box {
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    padding: 10px;
+    width: 100px;
+    height: 320px;
+    overflow-y: auto;
+    background: var(--xs-nav-bg);
+    border-radius: 12px;
+    border: calc(1px / 2) solid var(--xs-nav-bg-hover);
+}
+#xs-card-box::-webkit-scrollbar {
+    display: none;
+  }
+#xs-card-box > span {
+    display: inline-block;
+    width: 12px;
+    margin: 6px 8px;
+    height: 12px;
+}
+#xs-card-box > span:hover {
+    transition: .38s;
+    transform: scale(1.5);
+    border-radius: 50%;
+}
+
+#xs-card-box > div > .xs-card1 {
+    min-width: 88px;
+    width: max-content;
+    margin: 10px 0;
+    min-height: 88px;
+    height: max-content;
+    background: #fff;
+    border-radius: 18px;
+    padding: 15px 12px;
+    line-height: 180%;
+    color: #000;
+    transition: .3s;
+    transform: scale(.98);
+    opacity: 1;
+}
+.xs-card2 {
+    min-width: 88px;
+    width: max-content;
+    min-height: 88px;
+    height: max-content;
+
+    margin: 10px 0;
+    background: rgb(219, 155, 155);
+    border-radius: 12px;
+    padding: 15px 12px;
+    line-height: 180%;
+    color: rgb(73, 50, 50);
+    transition: .3s;
+    transform: scale(.98);
+    opacity: 1;
+}
+.xs-card3 {
+    min-width: 88px;
+    width: max-content;
+    min-height: 88px;
+    height: max-content;
+
+    margin: 10px 0;
+    background: rgb(209, 245, 167);
+    border-radius: 6px;
+    padding: 15px 12px;
+    line-height: 180%;
+    color: #000;
+    transition: .3s;
+    transform: scale(.98);
+    opacity: 1;
+}
