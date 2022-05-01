@@ -3,7 +3,9 @@ import OptionArea from '../packages/xseditor-decorate'
 import EditArea from '../packages/xseditor-kernel'
 import handleChange from '../packages/xseditor-listener/change'
 import listenerDrop from '../packages/xseditor-listener/drop'
+import prepare from "./prepare"
 export default (Vm: Element | Target, Config: Target) => {
+    prepare(Vm)
     {
         // 渲染选项区
         Vm.appendChild(achieveD(OptionArea(Config)))

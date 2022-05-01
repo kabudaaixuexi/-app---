@@ -1,7 +1,4 @@
-import prepare from './prepare'
 export default (Config?: Target) => {
-    console.log(Config.value, 'Config.value');
-    Config.value && prepare(Config)
     return Config.value ? Config.value : {
         children: [],
         xs_data: {
