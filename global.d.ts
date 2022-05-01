@@ -1,5 +1,6 @@
 interface Configure {
-    onChange: Function
+    onChange: Function,
+    value: Target
 }
 
 type Target = any

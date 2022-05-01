@@ -2,6 +2,7 @@ import renderXsEditor from './render'
 export default (
     Element: Element | null,
     Config:Configure = {
+        value: null,
         onChange: () => {}
     }
 ) => {

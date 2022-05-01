@@ -1,5 +1,5 @@
 export default (Config?: Target) => {
-    return {
+    return Config.value ? Config.value : {
         children: [],
         xs_data: {
             contenteditable: "true",
@@ -8,6 +8,5 @@ export default (Config?: Target) => {
         },
         xs_tag: "article",
         xs_type: 1,
-        xs_value: undefined
     }
 }
