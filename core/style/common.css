@@ -92,6 +92,7 @@
 
 
 xs-nav {
+    color: #fefafa;
     display: inline-block;
     padding: var( --xs-nav-padding);
     margin: var( --xs-nav-margin);

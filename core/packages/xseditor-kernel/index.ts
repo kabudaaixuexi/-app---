@@ -1,7 +1,6 @@
 export default (Config?: Target) => {
     console.log(Config, 'Config');
-    
-    return Config.value ? Config.value : {
+    return (Config.value && Config.value.xs_data && Config.value.xs_tag) ? Config.value : {
         children: [],
         xs_data: {
             contenteditable: "true",
