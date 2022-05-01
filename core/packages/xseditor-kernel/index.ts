@@ -1,7 +1,7 @@
-
+import prepare from './prepare'
 export default (Config?: Target) => {
     console.log(Config.value, 'Config.value');
-    Config.value && (Config.value.xs_data.style = 'display: flex;flex-direction: column;z-index: 1;height: 100%')
+    Config.value && prepare(Config)
     return Config.value ? Config.value : {
         children: [],
         xs_data: {
