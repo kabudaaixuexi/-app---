@@ -1,4 +1,6 @@
 export default (Config?: Target) => {
+    console.log(Config, 'Config');
+    
     return Config.value ? Config.value : {
         children: [],
         xs_data: {
