@@ -65,7 +65,7 @@
     outline: none;
     padding: 16px 12px;
     box-sizing: border-box;
-    border: 1px solid #337ecc;
+    border: calc(1px / 2) solid var( --xs-nav-bg-hover);
     overflow-y: auto;
     font-size: 14px;
     font-family:'Courier New', Courier, monospace;
@@ -80,7 +80,8 @@
     width: 100%;
     z-index: 1;
     color: var(--xs-text-color-primary);
-    border: 1px solid darkgray;
+    border: calc(1px / 2) solid var( --xs-nav-bg-hover);
+    border-bottom: 0;
     font-size: 12px;
     user-select: none;
     display: flex;

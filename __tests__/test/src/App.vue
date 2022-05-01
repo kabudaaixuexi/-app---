@@ -15,7 +15,7 @@ export default {
       xsEditor(
         document.querySelector('#edit'),
         {
-          upFileUrl: 'http://124.220.16.124:8099/upload/setFilesNote',
+          // upFileUrl: 'http://124.220.16.124:8099/upload/setFilesNote',
           onChange: (e, vd) => {
             console.log(e, vd);
           }
