@@ -1,7 +1,7 @@
 
 export default (Config?: Target) => {
     console.log(Config.value, 'Config.value');
-    Config.value && (Config.value.xs_data.style = 'display: flex;flex-direction: column;')
+    Config.value && (Config.value.xs_data.style = 'display: flex;flex-direction: column;z-index: 1;height: 100%')
     return Config.value ? Config.value : {
         children: [],
         xs_data: {
