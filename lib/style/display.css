@@ -12,6 +12,9 @@
     animation: displayShow .28s 1 forwards;
 }
 
+.xs-display{
+    opacity: 0.5;
+}
 
 @keyframes displayShow {
     0% {
