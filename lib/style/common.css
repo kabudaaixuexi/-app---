@@ -59,7 +59,7 @@
     --xs-bg-color-default: transparent;
 }
 .xs-editor-container {
-    width: calc(100% - 200px);
+    width: 100%;
     z-index: 1;
     flex: 1;
     color: var(--xs-color-info-light-9);
@@ -79,7 +79,7 @@
 }
 
 .xs-editor-decorate {
-    width: calc(100% - 200px);
+    width: 100%;
     z-index: 999;
     /* color: var(--xs-color-info-light-9); */
     border-bottom: calc(1px / 2) solid var( --xs-nav-bg-hover);
