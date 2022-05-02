@@ -1,5 +1,6 @@
 interface Configure {
     onChange: Function,
+    operable: Boolean,
     value: Target
 }
 

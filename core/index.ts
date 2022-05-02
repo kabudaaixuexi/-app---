@@ -3,6 +3,7 @@ export default (
     Element: Element | null,
     Config:Configure = {
         value: null,
+        operable: true,
         onChange: () => {}
     },
     Callback: Function = () => {}

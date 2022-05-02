@@ -10,7 +10,7 @@ export default (Vm: Element | Target, Config: Target, Callback: Function = () =>
     prepare(Vm)
     {
         // 渲染选项区
-        Vm.appendChild(achieveD(OptionArea(Config)))
+        Config.operable && Vm.appendChild(achieveD(OptionArea(Config)))
         // 渲染编辑区
         const xsEditor = achieveD(EditArea(Config))
         Vm.appendChild(xsEditor)
