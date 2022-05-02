@@ -79,7 +79,7 @@
 }
 
 .xs-editor-decorate {
-    width: 100%;
+    width: calc(100% - 200px);
     z-index: 999;
     /* color: var(--xs-color-info-light-9); */
     border-bottom: calc(1px / 2) solid var( --xs-nav-bg-hover);
