@@ -4,8 +4,9 @@ export default (
     Config:Configure = {
         value: null,
         onChange: () => {}
-    }
+    },
+    Callback: Function = () => {}
 ) => {
     if (!Element) return new Error('Initialize XS editor render target DOM cannot be empty')
-    renderXsEditor(Element, Config)
+    renderXsEditor(Element, Config, Callback)
 }
