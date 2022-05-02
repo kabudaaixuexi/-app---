@@ -3,6 +3,7 @@
 @import url(./hiliteColor.css);
 @import url(./foreColor.css);
 @import url(./insertHTML.css);
+@import url(./display.css);
 * {
     margin: 0;
     padding: 0;
@@ -66,7 +67,8 @@
     outline: none;
     padding: 16px 12px;
     box-sizing: border-box;
-    border: calc(1px / 2) solid var( --xs-nav-bg-hover);
+    /* border: calc(1px / 2) solid var( --xs-nav-bg-hover);
+    border-top: 0; */
     overflow-y: auto;
     font-size: 14px;
     font-family:'Courier New', Courier, monospace;
@@ -81,8 +83,7 @@
     width: 100%;
     z-index: 999;
     /* color: var(--xs-color-info-light-9); */
-    border: calc(1px / 2) solid var( --xs-nav-bg-hover);
-    border-bottom: 0;
+    border-bottom: calc(1px / 2) solid var( --xs-nav-bg-hover);
     font-size: 12px;
     user-select: none;
     display: flex;

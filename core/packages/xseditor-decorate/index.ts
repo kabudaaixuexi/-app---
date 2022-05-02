@@ -1,3 +1,4 @@
+import Display from './display'
 import Img from './img'
 import Card from './card'
 import Bold from './bold'
@@ -24,6 +25,7 @@ import RemoveFormat from './removeFormat'
 export default (Config?: Target) => {
     return {
         children: [
+            Display,
             Img(Config),
             Card,
             Bold,
@@ -53,7 +55,7 @@ export default (Config?: Target) => {
             RemoveFormat
         ],
         xs_data: {
-            class: `xs-editor-decorate`
+            class: `xs-editor-decorate xs-display-hide`
         },
         xs_tag: "article",
         xs_type: 1,
