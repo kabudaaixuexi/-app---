@@ -4,6 +4,7 @@ export default (
     Config:Configure = {
         value: null,
         operable: true,
+        watermark: '',
         onChange: () => {}
     },
     Callback: Function = () => {}

@@ -15,7 +15,9 @@ export default {
       xsEditor(
         document.querySelector('#edit'),
         {
-          // upFileUrl: 'http://124.220.16.124:8099/upload/setFilesNote',
+          operable: true,
+          watermark: 'sva哈哈哈哈',
+          upFileUrl: 'http://124.220.16.124:8099/upload/setFilesNote',
           onChange: (e, vd) => {
             console.log(e, vd);
           }
@@ -34,6 +36,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
+  height: 600px;
+  background-color: #2c3e50;
 }
 #edit {
   background-color: #2c3e50;

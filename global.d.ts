@@ -1,7 +1,8 @@
 interface Configure {
     onChange: Function,
     operable: Boolean,
-    value: Target
+    value: Target,
+    watermark: String
 }
 
 type Target = any
