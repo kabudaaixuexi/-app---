@@ -10,7 +10,7 @@ export default function watermark(settings: Target = {}) {
         watermark_x_space:30,//水印x轴间隔
         watermark_y_space:20,//水印y轴间隔
         watermark_color:'#aaa',//水印字体颜色
-        watermark_alpha:0.2,//水印透明度
+        watermark_alpha:0.1,//水印透明度
         watermark_fontsize:'14px',//水印字体大小
         watermark_font:'cursive',//水印字体
         watermark_width:150,//水印宽度
