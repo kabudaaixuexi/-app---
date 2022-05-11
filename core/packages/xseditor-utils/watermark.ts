@@ -82,5 +82,22 @@ export default function watermark(settings: Target = {}) {
             oTemp.appendChild(mask_div);
         };
     };
-    maskElement.appendChild(oTemp);
+    // svg
+    const content = document.createElement('span')
+    content.appendChild(oTemp)
+    const svg = content.innerHTML
+    const svgSrc = "data:image/svg+xml," + "<svg xmlns='http://www.w3.org/2000/svg'>" +
+        "<foreignObject width='100%' height='100%'>" +
+        "<div xmlns='http://www.w3.org/1999/xhtml' style='font-size:16px;font-family:Helvetica'>" + svg +
+        "</div>" + "</foreignObject>" + "</svg>";
+    const img = new Image();
+    img.src = svgSrc;
+    img.style.position = 'absolute'
+    img.style.left = '0'
+    img.style.top = '0'
+    img.style.display = 'inline-block'
+    img.style.width = '100%'
+    img.style.height = '100%'
+    maskElement.appendChild(img);
+    // maskElement.appendChild(oTemp);
 }
