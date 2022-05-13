@@ -1,6 +1,6 @@
 {
   "name": "@akar/xs-editor",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "一个单纯的富文本",
   "author": "ningrui",
   "devDependencies": {
@@ -15,7 +15,6 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 core/**/*.css lib/",
     "build": "yarn clean && tsc && yarn copy-files",
     "test": "jest",
