@@ -1,0 +1,83 @@
+.xs-message {
+    min-width: 320px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #EBEEf5;
+    background-color: #edf2fc;
+    font-size: 12px;
+    transform: translateX(-50%) scale(.8);
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transition: opacity .3s, transform .4s, top .4s;
+    padding: 10px 12px 10px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.xs-message-center {
+    justify-content: center;
+}
+
+.xs-message .xs-message-content {
+    margin-left: 16px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.xs-message .xs-close-button {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAINJREFUOE+lk1EOwCAIQ+vJt518S81qGCBL1D8ifRaEhs3TNvWwgBvABeD8gR5vTtdaAIW8rCASM5d5HwDjChLEGWAGScUzgIewN3Q2bNseVb+gcgTsNftTAWR7CSCxXvXxMJI5sMmaCZUT+uABmVivpRALqMRTyMooy0kY5aW92t7GB3TFKRHPlyEaAAAAAElFTkSuQmCC');
+    width: 12px;
+    height: 12px;
+    background-size: 100% 100%;
+}
+
+.xs-message-leave {
+    opacity: 0;
+    transform: translate(-50%, -100%) scale(.6);
+}
+
+.xs-message-enter {
+    opacity: 1;
+    transform: translate(-50%, -100%) scale(.6);
+}
+
+.xs-message-info .xs-message-content {
+    color: #909399;
+}
+
+.xs-message-success {
+    background-color: #f0f9eb;
+    border-color: #e1f3d8;
+}
+
+.xs-message-success .xs-message-content {
+    color: #67c23c;
+}
+
+.xs-message-warning {
+    background-color: #fdf6ec;
+    border-color: #faecd8;
+}
+
+.xs-message-warning .xs-message-content {
+    color: #e6a23c;
+}
+
+.xs-message-error {
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+}
+
+.xs-message-error .xs-message-content {
+    color: #f56c6c;
+}

@@ -1,6 +1,6 @@
 {
   "name": "@akar/xs-editor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "一个单纯的富文本",
   "author": "ningrui",
   "devDependencies": {
@@ -16,7 +16,7 @@
   "main": "lib/index.js",
   "scripts": {
     "copy-files": "copyfiles -u 1 core/**/*.css lib/",
-    "build": "yarn clean && tsc && yarn copy-files",
+    "build": "tsc && yarn copy-files",
     "test": "jest",
     "co": "sh release.sh"
   },
@@ -31,6 +31,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kabudaaixuexi/sw-decorator-property.git"
+    "url": "git@github.com:kabudaaixuexi/npm-xs-editor.git"
   }
 }
