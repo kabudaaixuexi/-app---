@@ -62,9 +62,12 @@
     width: 100%;
     z-index: 1;
     flex: 1;
+    color: var(--xs-color-info-light-9);
     outline: none;
-    padding: 12px 16px;
+    padding: 12px;
     box-sizing: border-box;
+    /* border: calc(1px / 2) solid var( --xs-nav-bg-hover);
+    border-top: 0; */
     overflow-y: auto;
     font-size: 14px;
     font-family:'Courier New', Courier, monospace;

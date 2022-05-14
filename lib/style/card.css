@@ -1,0 +1,112 @@
+.xs-card {
+    position: relative;
+}
+@keyframes cardShow {
+    0% {
+        display: block;
+        opacity: 0;
+        transform: translate(-40%, 50%);
+    }
+    20%{
+        opacity: 0;
+        transform: translate(-40%, 10%) scale(.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-40%, 0) scale(1);
+    }
+}
+.xs-card-show {
+    z-index: 9;
+    animation: cardShow .28s 1 forwards;
+}
+.xs-card-hide {
+    transform: scale(0);
+}
+#xs-card-box {
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    padding: 6px;
+    width: 120px;
+    height: 320px;
+    overflow-y: auto;
+    background: var(--xs-nav-bg);
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: calc(1px / 2) solid var(--xs-nav-bg-hover);
+}
+#xs-card-box::-webkit-scrollbar {
+    display: none;
+}
+
+
+.xs-card1 {
+    min-width: 107px;
+    min-height: 78px;
+    width: max-content;
+    height: max-content;
+    background: #fff;
+
+    border-radius: 18px;
+
+    margin: 6px 0;
+    padding: 14px 12px;
+
+    line-height: 180%;
+    color: #000;
+    transition: .3s;
+    transform: scale(.98);
+    opacity: 1;
+    box-sizing: border-box;
+}
+.xs-card2 {
+    min-width: 107px;
+    min-height: 78px;
+    width: max-content;
+    height: max-content;
+
+    margin: 6px 0;
+    background: rgb(219, 155, 155);
+    border-radius: 12px;
+    padding: 15px 12px;
+    line-height: 180%;
+    color: rgb(73, 50, 50);
+    transition: .3s;
+    transform: scale(.98);
+    opacity: 1;
+    box-sizing: border-box;
+}
+.xs-card3 {
+    min-width: 107px;
+    min-height: 78px;
+    width: max-content;
+    height: max-content;
+
+    margin: 6px 0;
+    background: rgb(209, 245, 167);
+    border-radius: 6px;
+    padding: 15px 12px;
+    line-height: 180%;
+    color: #000;
+    transition: .3s;
+    transform: scale(.98);
+    opacity: 1;
+    box-sizing: border-box;
+}
+.xs-card4 {
+    min-width: 107px;
+    min-height: 78px;
+    width: max-content;
+    height: max-content;
+
+    margin: 6px 0;
+    background: rgb(122, 203, 223);
+    padding: 15px 12px;
+    line-height: 180%;
+    color: #000;
+    transition: .3s;
+    transform: scale(.98);
+    opacity: 1;
+    box-sizing: border-box;
+}

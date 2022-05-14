@@ -2,8 +2,10 @@ interface Configure {
     onChange: Function,
     operable: Boolean,
     value: Target,
-    watermark: String
+    watermark: String,
+    pattern?: Pattern
 }
+type Pattern = 'classic' | 'silent'
 
 type Target = any
 

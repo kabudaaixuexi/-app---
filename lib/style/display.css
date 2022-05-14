@@ -1,0 +1,27 @@
+.xs-display-hide {
+    position: relative;
+    transition: .28s;
+    width: 36px !important;
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
+    border: none !important;
+}
+
+.xs-display-show {
+    position: relative;
+    animation: displayShow .28s 1 forwards;
+}
+
+.xs-display{
+    opacity: 0.5;
+}
+
+@keyframes displayShow {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        flex-wrap: wrap;
+    }
+}

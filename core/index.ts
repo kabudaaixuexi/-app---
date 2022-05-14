@@ -1,10 +1,12 @@
 import renderXsEditor from './render'
+
 export default (
     Element: Element | null,
     Config:Configure = {
         value: null,
-        operable: true,
+        operable: true, // Editable？
         watermark: '',
+        pattern: 'classic',
         onChange: () => {}
     },
     Callback: Function = () => {}
