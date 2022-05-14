@@ -35,8 +35,8 @@ export default function watermark(settings: Target = {}) {
 
 
     var maskElement=document.getElementById(defaultSettings.watermarl_element) || document.body;
-    console.log(defaultSettings.watermarl_element);
-    console.log(maskElement);
+    // console.log(defaultSettings.watermarl_element);
+    // console.log(maskElement);
     //获取页面最大宽度
     var page_width = Math.max(maskElement.scrollWidth,maskElement.clientWidth);
 

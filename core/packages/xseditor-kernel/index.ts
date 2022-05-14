@@ -13,8 +13,7 @@ const filter = (value: Target, Config: Target) => {
     }
 }
 export default (Config?: Target) => {
-    console.log(Config, 'Config');
-    console.log(patternClass[Config.pattern]);
+    // console.log(Config, 'Config');
     
     return (Config.value && Config.value.xs_data && Config.value.xs_tag) ? filter(Config.value, Config) : {
         children: [],

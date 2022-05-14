@@ -1,10 +1,10 @@
 export const patternClass: Target = {
     "classic": {
-        impression: '#fff',
+        impression: '#fefefe',
         upperStrata: '#333'
     },
     "silent": {
         impression: '#333',
-        upperStrata: '#fff'
+        upperStrata: '#fefefe'
     }
 }

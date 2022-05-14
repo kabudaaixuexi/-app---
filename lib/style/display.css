@@ -14,6 +14,7 @@
 
 .xs-display{
     opacity: 0.5;
+    background-color: aqua;
 }
 
 @keyframes displayShow {
