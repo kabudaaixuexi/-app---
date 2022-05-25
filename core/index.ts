@@ -7,7 +7,8 @@ export default (
         operable: true, // Editable？
         watermark: '',
         pattern: 'classic',
-        onChange: () => {}
+        onChange: () => {},
+        onKeyup:() => {}
     },
     Callback: Function = () => {}
 ) => {

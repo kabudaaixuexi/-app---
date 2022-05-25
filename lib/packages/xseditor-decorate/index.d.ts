@@ -1,4 +1,4 @@
-declare const _default: (Config?: Target) => {
+declare const _default: (el: Element | Target, Config: Target) => {
     children: ({
         xs_tag: string;
         xs_type: number;

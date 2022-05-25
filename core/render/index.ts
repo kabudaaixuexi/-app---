@@ -10,10 +10,11 @@ import watermark from "../packages/xseditor-utils/watermark"
 export default (Vm: Element | Target, Config: Target, Callback: Function = () => {}) => {
     prepare(Vm, Config)
     {
-        // 渲染选项区
-        Config.operable && Vm.appendChild(achieveD(OptionArea(Config)))
-        // 渲染编辑区
+        
         const xsEditor = achieveD(EditArea(Config))
+        // 渲染选项区
+        Config.operable && Vm.appendChild(achieveD(OptionArea(xsEditor, Config)))
+        // 渲染编辑区
         Vm.appendChild(xsEditor)
         // 添加水印
         Config.watermark && watermark({watermarl_element: Vm.id,　watermark_txt: Config.watermark})

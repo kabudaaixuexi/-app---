@@ -42,69 +42,59 @@
 
 
 .xs-card1 {
-    min-width: 107px;
+    width: 100%;
     min-height: 78px;
-    width: max-content;
     height: max-content;
-    background: #fff;
-
-    border-radius: 18px;
-
+    background: rgb(39, 38, 38);
+    border-radius: 4px;
     margin: 6px 0;
     padding: 14px 12px;
-
     line-height: 180%;
-    color: #000;
+    color: #fff;
     transition: .3s;
     transform: scale(.98);
     opacity: 1;
     box-sizing: border-box;
 }
 .xs-card2 {
-    min-width: 107px;
     min-height: 78px;
-    width: max-content;
+    width: 100%;
     height: max-content;
-
     margin: 6px 0;
-    background: rgb(219, 155, 155);
+    background: rgb(85, 64, 64);
     border-radius: 12px;
     padding: 15px 12px;
     line-height: 180%;
-    color: rgb(73, 50, 50);
+    color: #fff;
     transition: .3s;
     transform: scale(.98);
     opacity: 1;
     box-sizing: border-box;
 }
 .xs-card3 {
-    min-width: 107px;
     min-height: 78px;
-    width: max-content;
+    width: 100%;
     height: max-content;
-
     margin: 6px 0;
-    background: rgb(209, 245, 167);
+    background: rgb(68, 71, 64);
     border-radius: 6px;
     padding: 15px 12px;
     line-height: 180%;
-    color: #000;
+    color: #fff;
     transition: .3s;
     transform: scale(.98);
     opacity: 1;
     box-sizing: border-box;
 }
 .xs-card4 {
-    min-width: 107px;
     min-height: 78px;
-    width: max-content;
+    width: 100%;
     height: max-content;
-
     margin: 6px 0;
-    background: rgb(122, 203, 223);
+    background: rgb(50, 69, 73);
     padding: 15px 12px;
     line-height: 180%;
-    color: #000;
+    color: #fff;
     transition: .3s;
     transform: scale(.98);
     opacity: 1;

@@ -9,6 +9,7 @@ declare const _default: (Config?: Target) => {
     xs_data: {
         contenteditable: string;
         allowdrop: string;
+        style: string;
         class: string;
     };
     xs_tag: string;

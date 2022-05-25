@@ -9,12 +9,13 @@
 
 .xs-display-show {
     position: relative;
+    background-color: rgb(63, 80, 78);
     animation: displayShow .28s 1 forwards;
 }
 
 .xs-display{
-    opacity: 0.5;
-    background-color: aqua;
+    opacity: 0.4;
+    background-color: var( --xs-color-primary-light-5);
 }
 
 @keyframes displayShow {

@@ -3,7 +3,8 @@ interface Configure {
     operable: Boolean,
     value: Target,
     watermark: String,
-    pattern?: Pattern
+    pattern?: Pattern,
+    onKeyup: Function
 }
 type Pattern = 'classic' | 'silent'
 

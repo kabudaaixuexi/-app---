@@ -22,11 +22,11 @@ import FontName03 from './_fontName03'
 import FontName04 from './_fontName04'
 import InsertHTML from './insertHTML'
 import RemoveFormat from './removeFormat'
-export default (Config?: Target) => {
+export default (el: Element | Target, Config: Target) => {
     return {
         children: [
             Display,
-            Img(Config),
+            Img(el, Config),
             Card,
             Bold,
             Italic,
@@ -55,7 +55,7 @@ export default (Config?: Target) => {
             RemoveFormat
         ],
         xs_data: {
-            class: `xs-editor-decorate xs-display-hide`
+            class: `xs-editor-decorate xs-display-show`
         },
         xs_tag: "article",
         xs_type: 1,

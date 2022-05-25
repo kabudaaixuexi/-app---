@@ -1,4 +1,4 @@
-export default function (Config: Target): {
+export default function (region: Element | Target, Config: Target): {
     xs_tag: string;
     xs_type: number;
     xs_data: {

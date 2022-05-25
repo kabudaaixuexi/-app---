@@ -144,31 +144,23 @@ export const fontEmgs = '&#9194,&#9195,&#9196,&#9197,&#9198,&#9199,&#9200,&#9201
 
 export const cards = [
     `
-        <div>
-            <p style="min-height: 18.5px" />
-                <div class="xs-card1">基础卡片01号</div>
-            <p style="min-height: 18.5px" />
-        </div>
+        <p style="min-height: 18.5px" />
+            <div class="xs-card1">基础卡片01号</div>
+        <p style="min-height: 18.5px" />
     `,
     `
-    <div>
         <p style="min-height: 18.5px" />
             <div class="xs-card2">基础卡片02号</div>
         <p style="min-height: 18.5px" />
-    </div>
     `,
     `   
-    <div>
         <p style="min-height: 18.5px" />
             <div class="xs-card3">基础卡片03号</div>
         <p style="min-height: 18.5px" />
-    </div>
     `,
     `   
-    <div>
         <p style="min-height: 18.5px" />
             <div class="xs-card4">基础卡片04号</div>
         <p style="min-height: 18.5px" />
-    </div>
     `,
 ];

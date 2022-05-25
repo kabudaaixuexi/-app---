@@ -1,9 +1,11 @@
 import insertAtCursor from "../../xseditor-utils/insertAtCursor";
 // import changeStyle from "../../xseditor-utils/changeStyle";
+import { achieveVd } from "../../xseditor-dummy/achieveVd";
+import { achieveD } from "../../xseditor-dummy/achieveD";
 import request from '../../xseditor-utils/request'
 import message from "../_message";
 
-export default function (Config: Target) {
+export default function (region: Element | Target, Config: Target) {
   return {
     xs_tag: "xs-nav",
     xs_type: 1,
@@ -43,8 +45,10 @@ export default function (Config: Target) {
               //     <div class="xs-inset"><img onclick="window.open('${res.data[0]}')" style="max-width:100px;height:auto;" src="${res.data[0]}" /></div>
               // `})
               insertAtCursor(`
-                  <div class="xs-inset"><img onclick="window.open('${res.data[0]}')" style="max-width:100px;height:auto;" src="${res.data[0]}" /></div>
+                  <img class="xs-inset" onclick="window.open('${res.data[0]}')" style="display: inline-block;min-width:100px;max-width:300px;height:auto;" src="${res.data[0]}" />
               `)
+              // 手动执行一次onChange
+              Config.onChange(region, achieveVd(region));
             })
           },
         },

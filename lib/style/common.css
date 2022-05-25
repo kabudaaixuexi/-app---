@@ -62,12 +62,9 @@
     width: 100%;
     z-index: 1;
     flex: 1;
-    color: var(--xs-color-info-light-9);
     outline: none;
-    padding: 12px;
+    padding: 12px 16px;
     box-sizing: border-box;
-    /* border: calc(1px / 2) solid var( --xs-nav-bg-hover);
-    border-top: 0; */
     overflow-y: auto;
     font-size: 14px;
     font-family:'Courier New', Courier, monospace;
@@ -81,6 +78,7 @@
 .xs-editor-decorate {
     width: 100%;
     z-index: 999;
+    border-radius:3px 3px 0 0;
     /* color: var(--xs-color-info-light-9); */
     /* border-bottom: calc(1px / 2) solid var( --xs-nav-bg-hover); */
     font-size: 12px;
@@ -105,7 +103,8 @@ xs-nav {
     border-radius: var(--xs-nav-br);
 }
 xs-nav:hover {
-    background-color: var( --xs-nav-bg-hover);
+    opacity: 1;
+    background-color: var(--xs-color-primary-light-5);
 }
 .xs-blod {
 
