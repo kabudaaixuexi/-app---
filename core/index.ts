@@ -8,7 +8,7 @@ export default (
         watermark: '',
         pattern: 'classic',
         onChange: () => {},
-        onKeyup:() => {}
+        onKeyEnter: () => {}
     },
     Callback: Function = () => {}
 ) => {

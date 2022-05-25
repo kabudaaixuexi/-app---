@@ -1,10 +1,17 @@
 import request from "../xseditor-utils/request";
+import message from "../xseditor-decorate/_message";
+import { achieveVd } from "../xseditor-dummy/achieveVd";
 import changeStyle from "../xseditor-utils/changeStyle";
+import insertAtCursor from "../xseditor-utils/insertAtCursor";
+const forbidDefaultEvent = (e: Target) => {
+    e.preventDefault();
+}
 export default (el: Target,  Config: Target) => {
     el.addEventListener('dragover', (ev: Target) => {
-        ev.preventDefault();
+        forbidDefaultEvent(ev)
     })
     el.addEventListener('drop', (e: Target) => {
+        forbidDefaultEvent(e)
         var df = e.dataTransfer;
         var dropFiles: any = []; // 存放拖拽的文件对象
 
@@ -30,10 +37,11 @@ export default (el: Target,  Config: Target) => {
                 data,
                 form: true
             }).then((res: Target) => {
-                changeStyle({
-                    command: 'insertImage',
-                    value: res.data[0]
-                })
+                insertAtCursor(`
+                    <img class="xs-inset" onclick="window.open('${res.data[0]}')" style="display: inline-block;min-width:100px;max-width:300px;height:auto;" src="${res.data[0]}" />
+                `)
+                // 手动执行一次onChange
+                Config.onChange(el, achieveVd(el));
             })
         }
         // 追加pdf
@@ -46,9 +54,18 @@ export default (el: Target,  Config: Target) => {
         }
         dropFiles.map((ev: Target) => {
             // 如果拖进来的是图片
-            ev['type'].indexOf('image') !== -1 && appendImg(ev)
-            // 如果拖进来的是pdf
-            ev['type'].indexOf('pdf') !== -1 && appendOther(ev)
+            if(ev['type'].indexOf('image') !== -1) {
+                appendImg(ev)
+            } else if (ev['type'].indexOf('pdf') !== -1) { // 如果拖进来的是pdf
+                appendOther(ev)
+            } else {
+                message.setOption({
+                    message: "目前只识别图片或pdf",
+                    showClose: true,
+                    type: "warning",
+                    duration: 3000,
+                  });
+            }
         })
     })
 }

@@ -1,7 +1,6 @@
 import insertAtCursor from "../../xseditor-utils/insertAtCursor";
 // import changeStyle from "../../xseditor-utils/changeStyle";
 import { achieveVd } from "../../xseditor-dummy/achieveVd";
-import { achieveD } from "../../xseditor-dummy/achieveD";
 import request from '../../xseditor-utils/request'
 import message from "../_message";
 

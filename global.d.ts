@@ -4,7 +4,7 @@ interface Configure {
     value: Target,
     watermark: String,
     pattern?: Pattern,
-    onKeyup: Function
+    onKeyEnter?: Function
 }
 type Pattern = 'classic' | 'silent'
 
