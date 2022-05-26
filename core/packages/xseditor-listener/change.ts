@@ -12,7 +12,7 @@ export default (region: Element | Target, Config: Target) => {
     Config.onKeyEnter && (region.onkeydown=function(event: Target){
         if(event.keyCode == 13) {
             region.removeEventListener("input", handleChange)
-            Config.onKeyEnter(region.innerHTML, region)
+            Config.onKeyEnter(region.innerHTML, region, achieveVd(region))
             setTimeout(() => region.addEventListener("input", handleChange),0)
         }
     })
