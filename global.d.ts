@@ -4,6 +4,7 @@ interface Configure {
     value: Target,
     watermark: String,
     pattern?: Pattern,
+    upFileUrl?: String,
     onKeyEnter?: Function
 }
 type Pattern = 'classic' | 'silent'

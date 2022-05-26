@@ -29,13 +29,21 @@ export default (el: Target,  Config: Target) => {
 
         // 追加图片
         const appendImg = async (ev: any) => {
+            if (!Config.upFileUrl) {
+                message.setOption({
+                    message: "如需上传文件请先设置upFileUrl",
+                    showClose: true,
+                    type: "error",
+                    duration: 3000,
+                  });
+                return
+            }
             let data = new FormData() //初始化时将form Dom对象传入
             data.append('file', ev) //将imagefile键追加进去，值为input-file的dom对象，否则服务端无法获取file
             request({
                 type: 'POST',
                 url: Config.upFileUrl,
-                data,
-                form: true
+                data
             }).then((res: Target) => {
                 insertAtCursor(`
                     <img class="xs-inset" onclick="window.open('${res.data[0]}')" src="${res.data[0]}" />

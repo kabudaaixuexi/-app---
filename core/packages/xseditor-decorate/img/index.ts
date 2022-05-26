@@ -34,11 +34,11 @@ export default function (region: Element | Target, Config: Target) {
             }
             let form = new FormData();
             form.append('file',rawFile)
+
             request({
                 type: 'POST',
                 url: Config.upFileUrl,
-                data: form,
-                form: true
+                data: form
             }).then((res: Target) => {
               // changeStyle({command:'insertHTML', value: `
               //     <div class="xs-inset"><img onclick="window.open('${res.data[0]}')" style="max-width:100px;height:auto;" src="${res.data[0]}" /></div>

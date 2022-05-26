@@ -1,10 +1,14 @@
 import message from "../xseditor-decorate/_message";
+import { getCookie } from "../../utils";
 
 export default (props: Target) => {
-  const { type = "post", url = "", data = {}, form = false } = props;
+  const { type = "post", url = "", data = {} } = props;
   return new Promise((resolve) => {
     fetch(url, {
       method: type,
+      headers:{
+        'Authorization': 'Bearer ' + getCookie('token')
+       },
       body: data
     })
     .then(response => response.json())

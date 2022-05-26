@@ -6,6 +6,7 @@ export default (
         value: null,
         operable: true, // Editable？
         watermark: '',
+        upFileUrl: '',
         pattern: 'classic',
         onChange: () => {},
         onKeyEnter: () => {}
