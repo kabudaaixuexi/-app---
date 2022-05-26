@@ -4,7 +4,7 @@ import { achieveD } from "../xseditor-dummy/achieveD";
 
 export default (region: Element | Target, Config: Target) => {
     const handleChange = debounce((ev: Target) => {
-        Config.onChange(achieveD(achieveVd(ev.target)), achieveVd(ev.target));
+        Config.onChange && Config.onChange(achieveD(achieveVd(ev.target)), achieveVd(ev.target));
     }, 300, false)
     // 编辑
     Config.onChange && region.addEventListener("input", handleChange);

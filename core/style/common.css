@@ -121,3 +121,9 @@ xs-nav:hover {
     left: 0;
     top: 0;
 }
+.xs-inset {
+    display: inline-block;
+    min-width:100px;
+    max-width:300px;
+    height:auto;
+}

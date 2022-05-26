@@ -44,10 +44,10 @@ export default function (region: Element | Target, Config: Target) {
               //     <div class="xs-inset"><img onclick="window.open('${res.data[0]}')" style="max-width:100px;height:auto;" src="${res.data[0]}" /></div>
               // `})
               insertAtCursor(`
-                  <img class="xs-inset" onclick="window.open('${res.data[0]}')" style="display: inline-block;min-width:100px;max-width:300px;height:auto;" src="${res.data[0]}" />
+                  <img class="xs-inset" onclick="window.open('${res.data[0]}')" src="${res.data[0]}" />
               `)
               // 手动执行一次onChange
-              Config.onChange(region, achieveVd(region));
+              Config.onChange && Config.onChange(region, achieveVd(region));
             })
           },
         },

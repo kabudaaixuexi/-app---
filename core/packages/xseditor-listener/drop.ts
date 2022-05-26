@@ -41,7 +41,7 @@ export default (el: Target,  Config: Target) => {
                     <img class="xs-inset" onclick="window.open('${res.data[0]}')" style="display: inline-block;min-width:100px;max-width:300px;height:auto;" src="${res.data[0]}" />
                 `)
                 // 手动执行一次onChange
-                Config.onChange(el, achieveVd(el));
+                Config.onChange && Config.onChange(el, achieveVd(el));
             })
         }
         // 追加pdf
