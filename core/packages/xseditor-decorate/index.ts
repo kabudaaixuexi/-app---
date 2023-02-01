@@ -3,6 +3,7 @@ import Img from './img'
 import Card from './card'
 import Bold from './bold'
 import Italic from './italic'
+import Collapse from './collapse'
 import Underline from './underline'
 import ForeColor from './foreColor'
 import HiliteColor from './hiliteColor'
@@ -27,6 +28,7 @@ export default (el: Element | Target, Config: Target) => {
         children: [
             Display,
             Img(el, Config),
+            Collapse,
             Card,
             Bold,
             Italic,
@@ -37,21 +39,17 @@ export default (el: Element | Target, Config: Target) => {
             JustifyLeft,
             ForeColor,
             HiliteColor,
-
             FontSize01,
             FontSize02,
             FontSize03,
             FontSize04,
             FontSize05,
             FontSize06,
-
             FontName01,
             FontName02,
             FontName03,
             FontName04,
-
             InsertHTML,
-
             RemoveFormat
         ],
         xs_data: {

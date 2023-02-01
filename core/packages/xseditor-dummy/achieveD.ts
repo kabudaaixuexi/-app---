@@ -6,7 +6,7 @@ export const achieveD = (vd: Target, vm?: Element | Target) => {
         // 属性
         let xs_data = vd.xs_data;
         Object.entries(xs_data).forEach(([attrName, attrValue]) => {
-            if (attrName.substring(0, 2) === 'on' && attrName !== 'onclick') { // event
+            if (attrName.substring(0, 2) === 'on' && attrName !== 'onclick' && attrName !== 'ondblclick') { // event
                 xs_node.addEventListener(attrName.substring(2).toLowerCase(), (attrValue as any).bind(xs_node));
             } else {
                 xs_node.setAttribute(attrName, attrValue);

@@ -46,7 +46,7 @@ export default (el: Target,  Config: Target) => {
                 data
             }).then((res: Target) => {
                 insertAtCursor(`
-                    <img class="xs-inset" onclick="window.open('${res.data[0]}')" src="${res.data[0]}" />
+                    <img class="xs-inset" resizable ondblclick="window.open('${res.data[0]}')" src="${res.data[0]}" />
                 `)
                 // 手动执行一次onChange
                 Config.onChange && Config.onChange(el, achieveVd(el));
@@ -54,7 +54,7 @@ export default (el: Target,  Config: Target) => {
         }
         // 追加pdf
         const appendOther = (ev: any) => {
-            const template = `<iframe width="300px" height="400px" src="${URL.createObjectURL(ev)}" frameborder="0"></iframe>`;
+            const template = `<iframe  width="300px" height="400px" src="${URL.createObjectURL(ev)}" frameborder="0"></iframe>`;
             changeStyle({
                 command: 'insertHTML',
                 value: template

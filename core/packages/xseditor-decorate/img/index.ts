@@ -3,7 +3,8 @@ import insertAtCursor from "../../xseditor-utils/insertAtCursor";
 import { achieveVd } from "../../xseditor-dummy/achieveVd";
 import request from '../../xseditor-utils/request'
 import message from "../_message";
-
+import onResize from './onResize'
+onResize(null)
 export default function (region: Element | Target, Config: Target) {
   return {
     xs_tag: "xs-nav",
@@ -40,11 +41,8 @@ export default function (region: Element | Target, Config: Target) {
                 url: Config.upFileUrl,
                 data: form
             }).then((res: Target) => {
-              // changeStyle({command:'insertHTML', value: `
-              //     <div class="xs-inset"><img onclick="window.open('${res.data[0]}')" style="max-width:100px;height:auto;" src="${res.data[0]}" /></div>
-              // `})
               insertAtCursor(`
-                  <img class="xs-inset" onclick="window.open('${res.data[0]}')" src="${res.data[0]}" />
+                  <img resizable ondblclick="window.open('${res.data[0]}')" src="${res.data[0]}" />
               `)
               // 手动执行一次onChange
               Config.onChange && Config.onChange(region, achieveVd(region));

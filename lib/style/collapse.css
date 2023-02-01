@@ -1,0 +1,27 @@
+.xs-collapse-open
+{
+    cursor: pointer;
+    padding: 12px;
+    width: calc(100% - 24px);
+    min-height: 30px;
+    height: max-content;
+    transition: height .3s .3s;
+    opacity: 1;
+}
+
+.xs-collapse-fold
+{
+    transition: all .5s;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    padding: 10px 12px;
+    height: 24px;
+    width: 24px;
+    opacity: .6;
+    line-height: 200%;
+    background-color:rgb(233, 232, 227);
+    white-space: nowrap;
+    overflow:hidden;
+    border-radius: 4px;
+    text-overflow: ellipsis;
+}
