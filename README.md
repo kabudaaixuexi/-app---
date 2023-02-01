@@ -7,6 +7,8 @@
 + 案例
   
 ![图片加载中..](http://124.220.16.124:8099/files/noteFiles/WechatIMG69.png)
+![图片加载中..](http://124.220.16.124:8099/files/packages/Akar/_article/WechatIMG138.png)
+
 
 * 实现
   + 创建虚拟dom

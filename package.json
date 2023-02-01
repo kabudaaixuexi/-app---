@@ -1,6 +1,6 @@
 {
   "name": "@akar/xs-editor",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "一个单纯的富文本",
   "author": "ningrui",
   "devDependencies": {
